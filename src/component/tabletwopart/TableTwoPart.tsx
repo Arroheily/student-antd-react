@@ -18,9 +18,14 @@ class TableTwoPart extends React.Component {
                         <div className='title'>Room name</div>
                         <div className='title'><div>Price</div><div className='pre-week'>(per week)</div></div>
                     </div>
-                    <div>123</div>
+                    <div className='table-two-part-detail'>
+                        <div className='table-two-part-item'>21</div>
+                    </div>
+                    <div className='table-two-part-detail'>
+                        <div className='table-two-part-item'>21</div>
+                    </div>
+                    <div className='clearboth'/>
                 </div>
-                <div>123</div>
             </div>
         );
     }
