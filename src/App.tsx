@@ -1,16 +1,21 @@
 import * as React from 'react';
-import Home from '../src/page/Home';
 import './App.css';
+import Body from './menu/Body';
+import Header from './menu/Header';
+
+import { Layout, Row } from 'antd';
 
 class App extends React.Component {
-  public handleClick = (e: any) => {
-    console.log('click ', e);
-  }
   public render() {
     return (
-      <div className="App">
-        <Home />
-      </div>
+      <Layout>
+        <Row>
+          <Header />
+        </Row>
+        <Row>
+          <Body />
+        </Row>
+      </Layout>
     );
   }
 }

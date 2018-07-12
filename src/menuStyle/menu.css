@@ -1,0 +1,38 @@
+.haeder-ant-layout{
+    height: 64px;
+    background-color: #4c4c4c;
+    
+}
+.ant-layout-sider{
+    min-height: 800px;
+    background-color: #ffffff;
+}
+.ant-menu-item{
+    color: #f3efef;
+}
+.ant-menu-item:hover{
+    color: #4c4c4c;
+}
+.ant-menu-item-selected > a, .ant-menu-item-selected > a:hover{
+    color: #4c4c4c;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background: #ffffff;
+}
+.ant-menu-item-selected > a:before{
+    border-left: 4px solid #fcce01;
+    border-right:2px solid #f8f8f6;
+}
+.ant-menu-item-active > a, .ant-menu-item-active > a:hover{
+    color: #4c4c4c;
+}
+.ant-menu-vertical .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-inline .ant-menu-item:after{
+    border:none;
+}
+.ant-menu-inline > .ant-menu-item{
+    height: 32px;
+    line-height: 32px;
+}
+.ant-layout-has-sider .ant-layout{
+    background: #f8f8f6;
+}

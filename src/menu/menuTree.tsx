@@ -3,9 +3,10 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import menuConfig from '../menu/menuConfig';
 import MenuNode from '../menu/menuCore';
+import '../menuStyle/menu.css';
 
 
-class Home extends React.Component {
+class MenuTree extends React.Component {
     public renderMenuNode(node: MenuNode): any {
         if (node.isRoot) {
             const menuNodes = node.getNodesByLocation();
@@ -32,4 +33,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default MenuTree;

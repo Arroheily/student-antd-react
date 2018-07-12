@@ -1,0 +1,25 @@
+.table-two-part-row-title{    
+    height: 32px;
+    background-color: #f8f8f6;
+    box-shadow: inset 1px 1px 0 0 #e7e7e7, inset 0 -1px 0 0 #e7e7e7, inset -1px 0 0 0 #e7e7e7;
+}
+.table-two-part-row-title .title{
+    width: 25%;
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #63656a;
+    line-height: 32px;
+    padding-left: 24px;    
+}
+.table-two-part-row-title .title div{
+    float: left;
+}
+.table-two-part-row-title .title .pre-week{
+    font-weight: normal;
+    color: #4c4c4c;
+    padding-left: 5px;
+}

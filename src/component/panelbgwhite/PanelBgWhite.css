@@ -1,0 +1,16 @@
+.whitebg-panel{
+    padding: 24px 32px;
+    background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 24px;
+}
+.whitebg-panel-title{
+    font-family: AvenirNext;
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #4c4c4c;
+    margin-bottom: 24px;
+}
