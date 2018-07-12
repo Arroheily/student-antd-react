@@ -5,6 +5,7 @@ import menuConfig from '../menu/menuConfig';
 import MenuNode from '../menu/menuCore';
 
 
+
 class Home extends React.Component {
     public renderMenuNode(node: MenuNode): any {
         if (node.isRoot) {

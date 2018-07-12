@@ -6,9 +6,14 @@
 .ant-layout-sider{
     min-height: 800px;
     background-color: #ffffff;
+    flex: 0 0 12% !important;
+    min-width: 120px !important;
 }
 .ant-menu-item{
     color: #f3efef;
+}
+.ant-menu-item >a{
+    color: #827a7aa6;
 }
 .ant-menu-item:hover{
     color: #4c4c4c;
