@@ -1,8 +1,8 @@
 .properties-panel{
-    width: 20%;
     font-size: 14px;
     color: #4c4c4c;
     cursor: pointer; 
+    float: left;
 }
 .properties-div{
     background-color: #fdfdfd;

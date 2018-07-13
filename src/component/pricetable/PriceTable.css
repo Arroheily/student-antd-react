@@ -1,0 +1,34 @@
+.pricetable{
+    margin-bottom: 24px;
+}
+.pricetable .pricetable-row-title{
+    line-height: 32px;
+    height: 32px;
+    background-color: #f8f8f6;
+    box-shadow: inset 1px 1px 0 0 #e7e7e7, inset 0 -1px 0 0 #e7e7e7, inset -1px 0 0 0 #e7e7e7;
+}
+.pricetable .pricetable-row-detail{
+    height: 56px;
+    line-height: 56px;
+    box-shadow: inset 0 -1px 0 0 #e7e7e7, inset 1px 0 0 0 #e7e7e7, inset -1px 0 0 0 #e7e7e7;
+}
+.pricetable .pricetable-row-title .pricetable-col-title, .pricetable .pricetable-row-detail .pricetable-col-detail {
+    float: left;
+}
+.pricetable .pricetable-col-title, .pricetable .pricetable-col-detail{
+    padding-left: 24px;
+}
+.pricetable .name{
+    width: 70%;
+}
+.pricetable .price{
+    width: 20%;
+}
+.pricetable .action{
+    width: 10%;    
+}
+.pricetable .pricetable-row-detail .action span{
+    font-size: 13px;
+    color: #38b2a6;
+    cursor: pointer;
+}

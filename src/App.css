@@ -33,3 +33,9 @@
 .clearboth{
   clear: both;
 }
+.student-floatL{
+  float: left;
+}
+.student-marginBottom{
+  margin-bottom: 24px;
+}
