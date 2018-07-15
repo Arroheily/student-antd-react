@@ -22,13 +22,24 @@
     width: 70%;
 }
 .pricetable .price{
-    width: 20%;
+    width: 18%;
 }
 .pricetable .action{
-    width: 10%;    
+    width: 12%;    
 }
 .pricetable .pricetable-row-detail .action span{
     font-size: 13px;
     color: #38b2a6;
+    cursor: pointer;
+}
+.pricetable-col-detail button{
+    line-height: 16px;
+    width: 58px;
+    border: none;
+    background-color: #ffffff;
+    background-image: url('tab-icon-edit.svg');
+    background-repeat: no-repeat;
+    color: #38b2a6;
+    background-size: 16px;
     cursor: pointer;
 }

@@ -1,9 +1,10 @@
-import { Icon } from 'antd';
+// import { Icon } from 'antd';
 import * as React from 'react';
 import './PriceTable.css';
 
 interface IPriceTable {
     pricetableParam: any;
+    onClick: any;
 }
 
 class PriceTable extends React.Component<IPriceTable, any> {
@@ -18,10 +19,10 @@ class PriceTable extends React.Component<IPriceTable, any> {
                         <div className='pricetable-col-detail name'>{doc.roomName}</div>
                         <div className='pricetable-col-detail price'>{doc.price}</div>
                         <div className='pricetable-col-detail action'>
-                            <span>
-                                <Icon type="form" style={{ fontSize: 13, color: '#38b2a6', paddingRight: '5px' }} />
+                        {/* <Icon type="form" style={{ fontSize: 13, color: '#38b2a6', paddingRight: '5px',float:'left' }} />                         */}
+                            <button onClick={this.props.onClick} value={idx}>
                                 Edit
-                            </span>
+                            </button>
                         </div>
                     </div>
                 )

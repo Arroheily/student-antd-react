@@ -1,0 +1,6 @@
+.student-select .ant-select-selection--single{
+    height: 48px;
+}
+.student-select .ant-select-selection__rendered{
+    line-height: 46px;
+}

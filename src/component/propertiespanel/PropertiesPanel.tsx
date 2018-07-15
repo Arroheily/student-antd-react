@@ -4,6 +4,7 @@ import './PropertiesPanel.css';
 interface IPropertiesPanel {
     propertiespanelParam: any;
     width?: string;
+    onClick: any;
 }
 class PropertiesPanel extends React.Component<IPropertiesPanel, any> {
     constructor(props: IPropertiesPanel) {
@@ -13,7 +14,7 @@ class PropertiesPanel extends React.Component<IPropertiesPanel, any> {
         return (
             item.map((doc: any, idx: any) => {
                 return (
-                    <div key='propertiespanel_${idx}' className='properties-div' style={{width:'100%'}}>{doc.value}</div>
+                    <button value={idx} onClick={this.props.onClick} key={idx} className='properties-div' style={{width:'100%'}}>{doc.value}</button>
                 )
             })
         )

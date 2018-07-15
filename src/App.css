@@ -36,6 +36,20 @@
 .student-floatL{
   float: left;
 }
+.student-floatR{
+  float: right;
+}
 .student-marginBottom{
   margin-bottom: 24px;
+}
+.ant-btn-primary{
+  background-color: #fcce01 !important; 
+  border-color: #fcce01 !important; 
+}
+.ant-btn:hover{
+  border-color: #fcce01 !important;
+  color: #fcce01 !important;
+}
+.ant-btn-primary:hover{
+  color: #ffffff !important;
 }

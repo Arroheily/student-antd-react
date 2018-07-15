@@ -1,4 +1,5 @@
 import * as React from 'react';
+// import Button from '../button/Button';
 import './PanelBgWhite.css';
 
 interface IPanelBgWhite {
@@ -8,10 +9,19 @@ class PanelBgWhite extends React.Component<IPanelBgWhite, any> {
     constructor(props: IPanelBgWhite) {
         super(props);
     }
+    // public renderBtn() {
+    //     return (
+    //         <Button btnName='Add' onClick= {this.props.param.onClick} />
+    //     )    
+    // }
     public render() {
+        // let renderBtn;
+        // if(this.props.param.isButton){
+        //     renderBtn= this.renderBtn();
+        // }
         return (
-            <div className='whitebg-panel'>
-                <div className='whitebg-panel-title'>{this.props.param.title}</div>
+            <div className='whitebg-panel student-floatL' style={{ width: '80%' }}>
+                <div className={`whitebg-panel-title ${this.props.param.className}`}>{this.props.param.title}</div>
                 {this.props.children}
             </div>
         );
