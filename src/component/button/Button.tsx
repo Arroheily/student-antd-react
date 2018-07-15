@@ -4,6 +4,7 @@ import './Button.css';
 interface IPanelBgWhite {
     btnName: string;
     onClick: any;
+    className?: string;
 }
 class Button extends React.Component<IPanelBgWhite, any> {
     constructor(props: IPanelBgWhite) {
@@ -11,7 +12,7 @@ class Button extends React.Component<IPanelBgWhite, any> {
     }
     public render() {
         return (
-            <div className='student-btn' onClick={this.props.onClick}>{this.props.btnName}</div>
+            <div className={`student-btn ${this.props.className}`} onClick={this.props.onClick}>{this.props.btnName}</div>
         );
     }
 }

@@ -1,0 +1,54 @@
+{
+    "property": [
+        {
+            "property_name": "urbanest North Terrace",
+            "property_detail": [
+                {
+                    "id": 1000,
+                    "room_name": "urbanest room1",
+                    "room_price": "£250"
+                },
+                {
+                    "id": 1001,
+                    "room_name": "urbanest room2",
+                    "room_price": "£210"
+                },
+                {
+                    "id": 1002,
+                    "room_name": "urbanest room3",
+                    "room_price": "£280"
+                },
+                {
+                    "id": 1003,
+                    "room_name": "urbanest room4",
+                    "room_price": "£220"
+                }
+            ]
+        },
+        {
+            "property_name": "urbanest Cleveland Street",
+            "property_detail": [
+                {
+                    "id": 10000,
+                    "room_name": "Cleveland Street room1",
+                    "room_price": "£250"
+                },
+                {
+                    "id": 10001,
+                    "room_name": "Cleveland Street room2",
+                    "room_price": "£210"
+                },
+                {
+                    "id": 10002,
+                    "room_name": "Cleveland Street room3",
+                    "room_price": "£280"
+                },
+                {
+                    "id": 10003,
+                    "room_name": "urbanest room4",
+                    "room_price": "£220"
+                }
+            ]
+        }
+    ]
+}

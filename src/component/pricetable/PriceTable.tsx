@@ -4,6 +4,7 @@ import './PriceTable.css';
 
 interface IPriceTable {
     pricetableParam: any;
+    onClick: any;
 }
 
 class PriceTable extends React.Component<IPriceTable, any> {
@@ -18,7 +19,7 @@ class PriceTable extends React.Component<IPriceTable, any> {
                         <div className='pricetable-col-detail name'>{doc.roomName}</div>
                         <div className='pricetable-col-detail price'>{doc.price}</div>
                         <div className='pricetable-col-detail action'>
-                            <span>
+                            <span onClick={this.props.onClick}>
                                 <Icon type="form" style={{ fontSize: 13, color: '#38b2a6', paddingRight: '5px' }} />
                                 Edit
                             </span>

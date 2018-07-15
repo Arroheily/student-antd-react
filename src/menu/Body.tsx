@@ -1,4 +1,5 @@
 import { Layout } from 'antd';
+import HideSideIcon from '../../src/component/hidesideicon/HideSideIcon';
 import MenuModule from './menuModule';
 import MenuTree from './menuTree';
 
@@ -13,6 +14,7 @@ const Body = () => {
         <Layout>
             <Sider style={{ width: '50px' }}>
                 <MenuTree />
+                <HideSideIcon />
             </Sider>
             <Layout>
                 <MenuModule />

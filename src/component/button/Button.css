@@ -12,3 +12,6 @@
 .student-btn:hover{
     background-color: #5acec2;
 }
+.add-property-btn{
+    margin-top: -10px;
+}

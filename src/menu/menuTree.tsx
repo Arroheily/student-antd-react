@@ -27,7 +27,7 @@ class MenuTree extends React.Component {
                 <Link to={node.router}>{nameIcon}</Link>
             </Menu.Item>
         }
-    }    
+    }   
     public render(){
         return this.renderMenuNode(menuConfig);
     }

@@ -13,7 +13,7 @@ class PropertiesPanel extends React.Component<IPropertiesPanel, any> {
         return (
             item.map((doc: any, idx: any) => {
                 return (
-                    <div key='propertiespanel_${idx}' className='properties-div' style={{width:'100%'}}>{doc.value}</div>
+                    <div key={idx} className='properties-div' style={{width:'100%'}}>{doc.value}</div>
                 )
             })
         )
