@@ -12,24 +12,24 @@ import PropetiesPanel from '../../component/propertiespanel/PropertiesPanel';
 // import ToolTip from '../../component/tooltip/ToolTip';
 
 const pricetableParamproperties1 = [
-    { roomName: 'roomname1', price: '$250', action: '1' },
-    { roomName: 'roomname2', price: '$250', action: '2' },
-    { roomName: 'roomname3', price: '$250', action: '3' },
+    { roomName: 'roomname1', price: '250', action: '1' },
+    { roomName: 'roomname2', price: '250', action: '2' },
+    { roomName: 'roomname3', price: '250', action: '3' },
 ];
 const pricetableParamproperties2 = [
-    { roomName: 'properties2roomname1', price: '$250', action: '1' },
-    { roomName: 'properties2roomname2', price: '$250', action: '2' },
-    { roomName: 'properties2roomname3', price: '$250', action: '3' },
+    { roomName: 'properties2roomname1', price: '250', action: '1' },
+    { roomName: 'properties2roomname2', price: '250', action: '2' },
+    { roomName: 'properties2roomname3', price: '250', action: '3' },
 ];
 const pricetableParamproperties3 = [
-    { roomName: 'roomname11', price: '$250', action: '1' },
-    { roomName: 'roomname21', price: '$250', action: '2' },
-    { roomName: 'roomname31', price: '$250', action: '3' },
+    { roomName: 'roomname11', price: '250', action: '1' },
+    { roomName: 'roomname21', price: '250', action: '2' },
+    { roomName: 'roomname31', price: '250', action: '3' },
 ];
 const pricetableParamproperties4 = [
-    { roomName: 'roomname1d', price: '$250', action: '1' },
-    { roomName: 'roomname2d', price: '$250', action: '2' },
-    { roomName: 'roomname3d', price: '$250', action: '3' },
+    { roomName: 'roomname1d', price: '250', action: '1' },
+    { roomName: 'roomname2d', price: '250', action: '2' },
+    { roomName: 'roomname3d', price: '250', action: '3' },
 ];
 const propertiespanelParam = [
     { value: 'urbanest North Terrace', detail: pricetableParamproperties1, key: 0, current: 'GBP' },
@@ -50,6 +50,10 @@ class Edit extends React.Component<IEdit, any> {
         this.state = {
             add_property_visible: false, // 添加modal
             edit_room_visible: false, // 编辑modal
+            roomError: false,
+            priceError: false,
+            edit_room_error: false,
+            edit_price_error: false,
             pricetableParam: propertiespanelParam[0].detail, // 当前显示的price和room
             currentSelectPerproty: 0, // 当前选中的property
             currentSelectRoom: 0, // 当前选中的room
@@ -84,10 +88,20 @@ class Edit extends React.Component<IEdit, any> {
     }
     public addPrice() {
         if (this.state.edit_property_price_add_room_input.length > 0 &&
-            this.state.edit_property_price_add_price_input.length > 0) {
+            this.state.edit_property_price_add_price_input > 0 &&
+            this.state.edit_property_price_add_room_input.length < 25) {
             propertiespanelParam[this.state.currentSelectPerproty].detail.push({
                 roomName: this.state.edit_property_price_add_room_input, price: this.state.edit_property_price_add_price_input, action: '3'
             });
+            this.setState({
+                roomError: false,
+                priceError: false,
+            })
+        } else {
+            this.setState({
+                roomError: true,
+                priceError: true,
+            })
         }
         this.setState({
             pricetableParam: propertiespanelParam[this.state.currentSelectPerproty].detail
@@ -97,18 +111,30 @@ class Edit extends React.Component<IEdit, any> {
     // 编辑room start
     public handleEditOk() {
         const editRoom = propertiespanelParam[this.state.currentSelectPerproty].detail[this.state.currentSelectRoom];
-        editRoom.roomName = this.state.edit_property_price_edit_room_input;
-        editRoom.price = this.state.edit_property_price_edit_price_input;
-        this.setState({
-            edit_room_visible: false,
-        });
+        if (this.state.edit_property_price_edit_room_input.length > 0 &&
+            this.state.edit_property_price_edit_price_input > 0 &&
+            this.state.edit_property_price_edit_room_input.length < 25) {
+            editRoom.roomName = this.state.edit_property_price_edit_room_input;
+            editRoom.price = this.state.edit_property_price_edit_price_input;
+            this.setState({
+                edit_room_visible: false,
+                edit_room_error: false,
+                edit_price_error: false,
+            });
+        }
+        else {
+            this.setState({
+                edit_room_error: true,
+                edit_price_error: true
+            });
+        }
     }
     public handleEditCancel() {
         this.setState({
             edit_room_visible: false,
         });
     }
-    public deleteItem(){
+    public deleteItem() {
         this.setState({
             edit_room_visible: false,
         });
@@ -139,14 +165,15 @@ class Edit extends React.Component<IEdit, any> {
         return (
             <Modal okText='Save' cancelText='cancel' title='Edit room' visible={this.state.edit_room_visible}
                 onOk={this.handleEditOk} onCancel={this.handleEditCancel} >
-                <Input width='100%' inputtitle='Room name' isTitle={true} isIcon={false}
+                <Input width='100%' inputtitle='Room name' isError={this.state.edit_room_error} isTitle={true} isIcon={false}
                     value={this.state.edit_property_price_edit_room_input}
                     onChange={this.onchangeEditRoomName} className='student-marginBottom' placeholder='Room name' />
-                <Input width='100%' inputtitle='Price' isTitle={true} isIcon={false}
+                <Input width='100%' inputtitle='Price' isError={this.state.edit_price_error} isTitle={true} isIcon={true}
                     value={this.state.edit_property_price_edit_price_input}
+                    tooltipContent={TooltipContentParam}
                     onChange={this.onchangeEditRoomPrice} className='student-marginBottom' placeholder='Price' />
                 <button onClick={this.deleteItem}>删除本条</button>
-            </Modal>
+            </Modal>    
         )
     }
     public selectedPropertiesPanel(e: any) {
@@ -161,7 +188,6 @@ class Edit extends React.Component<IEdit, any> {
         })
     }
     public onchangeAddPriceInput(e: any) {
-        // alert(e.target.value);
         this.setState({
             edit_property_price_add_price_input: e.target.value,
         })
@@ -198,9 +224,9 @@ class Edit extends React.Component<IEdit, any> {
         return (
             <PanelBgGrey>
                 <div style={{ width: '100%' }}>
-                    <Input width='75%' isIcon={false} onChange={this.onchangeAddRoomInput}
+                    <Input width='75%' isError={this.state.roomError} isIcon={false} onChange={this.onchangeAddRoomInput}
                         className='student-marginBottom student-floatL' placeholder='Room name' />
-                    <Input width='22%' isError={true} isIcon={true} onChange={this.onchangeAddPriceInput}
+                    <Input width='22%' isError={this.state.priceError} isIcon={true} onChange={this.onchangeAddPriceInput}
                         tooltipContent={TooltipContentParam} className='student-marginBottom student-floatR' placeholder='Price' />
                 </div>
                 <div className='clearboth' />

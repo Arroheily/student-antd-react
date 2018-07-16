@@ -32,7 +32,7 @@ class InputComponent extends React.Component<IInput, any> {
     }
     public isError() {
         return (
-            <div/>
+            <div className='error_msg'>Please enter a valid value</div>
         )
     }
 

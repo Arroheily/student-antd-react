@@ -40,3 +40,7 @@
     margin-bottom: 12px;
     font-weight: 600;
 }
+.error_msg{
+    color: #d21e1f;
+    font-size: 14px;
+}
