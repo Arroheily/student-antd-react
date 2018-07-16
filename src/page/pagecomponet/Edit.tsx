@@ -137,7 +137,7 @@ class Edit extends React.Component<IEdit, any> {
 
     public renderEditRoomModal() {
         return (
-            <Modal okText='Save' cancelText='Cancel' title='Edit room' visible={this.state.edit_room_visible}
+            <Modal okText='Save' cancelText='cancel' title='Edit room' visible={this.state.edit_room_visible}
                 onOk={this.handleEditOk} onCancel={this.handleEditCancel} >
                 <Input width='100%' inputtitle='Room name' isTitle={true} isIcon={false}
                     value={this.state.edit_property_price_edit_room_input}
@@ -145,7 +145,7 @@ class Edit extends React.Component<IEdit, any> {
                 <Input width='100%' inputtitle='Price' isTitle={true} isIcon={false}
                     value={this.state.edit_property_price_edit_price_input}
                     onChange={this.onchangeEditRoomPrice} className='student-marginBottom' placeholder='Price' />
-                <button onClick={this.deleteItem}>delete</button>
+                <button onClick={this.deleteItem}>删除本条</button>
             </Modal>
         )
     }
