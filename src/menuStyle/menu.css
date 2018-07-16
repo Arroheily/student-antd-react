@@ -1,7 +1,10 @@
 .haeder-ant-layout{
     height: 64px;
     background-color: #4c4c4c;
-    
+    background-image: url('icon-logo.svg');
+    background-repeat: no-repeat;
+    background-size: 256px;
+    background-position: 2px;
 }
 .ant-layout-sider{
     min-height: 800px;

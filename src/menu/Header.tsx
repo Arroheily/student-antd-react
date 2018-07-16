@@ -4,9 +4,7 @@ import * as React from 'react';
 import '../menuStyle/menu.css';
 
 const Header = () => {
-    return <Layout className = "haeder-ant-layout">
-        123
-    </Layout>;
+    return <Layout className = "haeder-ant-layout"/>;
 }
 
 export default Header;
